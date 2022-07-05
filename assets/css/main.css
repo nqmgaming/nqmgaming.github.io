@@ -1,0 +1,646 @@
+:root {
+    --accent_color: #edf2fb;
+    --2nd-accent-color: #ff9b85;
+    --font_color: #242423;
+    --bg-color: #fff;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+
+html,
+body {
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    height: 100%;
+    /* width: 100%; */
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-weight: lighter;
+    background-color: var(--bg-color);
+    color: var(--font_color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+}
+
+b {
+    font-weight: 500;
+    color: var(--2nd-accent-coloraccent_color);
+}
+
+a {
+    font-family: 'Inter', sans-serif;
+    color: var(--font_color);
+    font-weight: 400;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    font-size: 9px;
+    font-weight: normal;
+}
+
+.section-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    max-width: 720px;
+    margin: auto;
+}
+
+.active {
+    color: var(--2nd-accent-color);
+    font-weight: 400;
+}
+
+.jp_word {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    opacity: 0.5;
+}
+
+.main__title {
+    text-align: center;
+}
+
+.main__title h2 {
+    font-size: 3.125rem;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 200;
+    display: inline-block;
+}
+
+.main-title p {
+    font: 15px;
+}
+
+.landing {
+    height: 100%;
+    width: 100%;
+}
+
+.social_section {
+    position: fixed;
+    width: 200px;
+    height: 35px;
+    left: 50%;
+    bottom: -10px;
+    margin-left: -100px;
+    background-color: var(--accent_color);
+    z-index: 10;
+    border-radius: 27px;
+    transition: 0.75s;
+}
+
+.social_section__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes BGSlideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.landing__bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    object-fit: cover;
+    background: url(../img/main_bg.jpg) no-repeat center 20%;
+    background-size: cover;
+    animation-duration: 3.5s;
+    animation-timing-function: ease;
+    animation-name: BGSlideDown;
+}
+
+.landing__content {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 15%;
+    color: #fff;
+    animation-duration: 3.5s;
+    animation-timing-function: ease;
+    animation-name: BGSlideDown;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.landing__content--maintitle {
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+.landing__content--subtitle {
+    font-family: 'Playfair Display', serif;
+}
+
+.poem_quote__container {
+    min-height: 350px;
+    width: auto;
+    position: relative;
+    display: block;
+}
+
+.poem_quote {
+    line-height: 1.5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--font_color);
+    margin: 1;
+}
+
+.poem_quote__poem--latin {
+    text-align: left;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    text-indent: -0.35em;
+}
+
+.poem_quote__author p {
+    position: absolute;
+    right: -80px;
+    bottom: -30px;
+    font-size: 12px;
+    font-family: 'Lora', serif;
+}
+
+.about_me__container {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.about_me__content {
+    max-width: 350px;
+    height: auto;
+    position: relative;
+    display: inline-block;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: justify;
+    text-align-last: center;
+    font-weight: 100;
+}
+
+.about_me__img {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    margin: auto;
+    left: 0;
+    right: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://avatars.githubusercontent.com/u/94773751?s=400&u=4434384c29a9582143f8c7854c720bdb5d3fcdcc&v=4');
+    -webkit-border-radius: 999px;
+}
+
+.project__container {
+    min-height: 200px;
+    width: 100%;
+    position: relative;
+}
+
+.project__content {
+    height: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    padding: 0;
+    margin: 0;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.project__card {
+    width: auto;
+    height: 150px;
+    position: relative;
+    display: flex;
+    margin: 30px;
+    align-items: center;
+    background-color: var(--accent_color);
+    border-radius: 22px;
+    -webkit-border-radius: 22px;
+    transition: 0.25s;
+}
+
+.project__card:hover,
+.contact__content a:hover {
+    -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.28);
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.28);
+    transform: scale(1.02);
+}
+
+.project__img {
+    width: 120px;
+    display: inline-block;
+    border-radius: 22px 0 0 27px;
+    -webkit-border-radius: 22px 0 0 27px;
+}
+
+.project__title {
+    display: block;
+    padding: 10px;
+}
+
+.project__title h2 {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.project__title h3,
+.project__title p {
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.project__title p {
+    font-size: 10px;
+}
+
+.contact__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.contact__container {
+    min-height: 300px;
+    max-width: 400px;
+}
+
+.contact__content {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: center;
+}
+
+.contact__content a {
+    height: 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    vertical-align: middle;
+    background-color: var(--accent_color);
+    padding: 10px;
+    border-radius: 22px;
+    -webkit-border-radius: 22px;
+    transition: 0.25s;
+}
+
+.contact__content a img {
+    height: 20px;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+}
+
+.menuItem,
+.menuItemLang {
+    display: inline-block;
+    font-size: 19px;
+    font-weight: 400;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    text-decoration: none;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.hamburger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    border: none;
+    background: var(--accent_color);
+    opacity: 0.95;
+    cursor: pointer;
+    border-radius: 999px;
+    transition: .75s;
+}
+
+.menuIcon {
+    height: 20px;
+}
+
+.closeIcon {
+    display: none;
+    height: 20px;
+}
+
+.menu {
+    min-width: 150px;
+    position: fixed;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform ease 0.5s;
+    top: 100px;
+    right: -150px;
+    margin: 0;
+    padding: 0;
+    background: var(--accent_color);
+    opacity: 0.95;
+    list-style: none;
+    border-radius: 22px;
+    -webkit-border-radius: 22px;
+    margin: 10px 0 0 220px;
+    backdrop-filter: blur(150px);
+    transform: scale(0.7);
+    transition: 0.75s;
+}
+
+.menu__lang {
+    min-width: 150px;
+    position: fixed;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform ease 0.5s;
+    top: 350px;
+    right: -150px;
+    margin: 0;
+    padding: 0;
+    background: var(--accent_color);
+    opacity: 0.95;
+    list-style: none;
+    border-radius: 22px;
+    -webkit-border-radius: 22px;
+    margin: 10px 0 0 220px;
+    transform: scale(0.8);
+    transition: 0.75s;
+}
+
+li a {
+    color: #000;
+}
+
+.menu li,
+.menu__lang li {
+    padding: 15px 17px;
+}
+
+.menu li a:hover,
+.menu__lang li a:hover {
+    color: var(--2nd-accent-color);
+}
+
+.menu:not(:hover) {
+    /* color: var(--font_color); */
+}
+
+.showMenu {
+    transform: translateY(0) scalex(1);
+    margin: 10px 175px 0 220px;
+}
+
+.down {
+    display: none;
+}
+
+.wrapper-menu {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 330ms ease-out;
+}
+
+.wrapper-menu.open {
+    transform: rotate(-45deg);
+}
+
+.line-menu {
+    background-color: #000;
+    border-radius: 5px;
+    width: 100%;
+    height: 4px;
+}
+
+.line-menu.half {
+    width: 50%;
+}
+
+.line-menu.start {
+    transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+    transform-origin: right;
+}
+
+.open .line-menu.start {
+    transform: rotate(-90deg) translateX(3px);
+    background-color: #f08080;
+}
+
+.line-menu.end {
+    align-self: flex-end;
+    transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+    transform-origin: left;
+}
+
+.open .line-menu.end {
+    transform: rotate(-90deg) translateX(-3px);
+    background-color: #f08080;
+}
+
+.open .line-menu {
+    background-color: #f08080;
+}
+
+.fade {
+    opacity: 0;
+}
+
+.primary-underline {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+}
+
+.primary-underline:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 17px;
+    margin: 13px 0;
+    border-radius: 9999px;
+    background: var(--accent_color);
+}
+
+@media screen and (min-width: 600px) {
+    .about_me__container {
+        display: flex;
+        justify-content: space-evenly;
+        max-width: 600px;
+        box-sizing: border-box;
+        margin: auto;
+    }
+    .about_me__img {
+        margin: 0;
+        width: px;
+        height: 180px;
+    }
+    .project__content {
+        flex-direction: row;
+    }
+    .menu,
+    .menu__lang {
+        margin-left: 80%;
+    }
+    .hamburger {
+        right: 70px;
+    }
+    .poem_quote__container {
+        /* min-height: 550px; */
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .landing__bg {
+        content: url("../img/main_bg.jpg");
+        border: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    footer {
+        max-width: 80%;
+    }
+    .page-wrapper {
+        max-width: 80vw;
+    }
+    .hamburger {
+        display: none;
+    }
+    .menu,
+    .menu__lang {
+        top: unset;
+        bottom: unset;
+        right: 10%;
+        width: 17%;
+    }
+    .menu {
+        top: 10%;
+        height: 55%;
+        margin: 11px;
+        transform: translateY(0) scalex(1);
+    }
+    .menu__lang {
+        bottom: 10%;
+        height: 20%;
+        margin: 11px;
+        transform: translateY(0) scalex(1);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --font_color: #fff;
+        --bg-color: #000;
+    }
+    li a {
+        color: #fff;
+    }
+    .primary-underline:before {
+        background: rgba(175, 219, 245, 0.3);
+    }
+    .project__card {
+        background-color: rgb(46, 45, 45);
+    }
+    .contact__content a {
+        background-color: rgb(46, 45, 45);
+    }
+    .contact__content a img {
+        filter: invert(1);
+    }
+    .loader-wrapper {
+        background-color: rgb(46, 45, 45);
+    }
+    .menu,
+    .menu__lang {
+        background-color: rgb(46, 45, 45);
+    }
+}

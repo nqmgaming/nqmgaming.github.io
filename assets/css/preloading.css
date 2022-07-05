@@ -1,0 +1,95 @@
+.loader-wrapper {
+    width: 100%;
+    height: calc(100% + 50px);
+    position: fixed;
+    bottom: -50px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent_color);
+    border-radius: 0 0 37px 37px;
+    z-index: 999;
+}
+
+.loader {
+    position: relative;
+    width: 2.5em;
+    height: 2.5em;
+    transform: rotate(165deg);
+    background-color: var(--accent_color);
+}
+
+.loader:before,
+.loader:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 0.25em;
+    transform: translate(-50%, -50%);
+}
+
+.loader:before {
+    animation: before 2s infinite;
+}
+
+.loader:after {
+    animation: after 2s infinite;
+}
+
+@keyframes before {
+    0% {
+        width: 0.5em;
+        box-shadow: 1em -0.5em var(--2nd-accent-color), -1em 0.5em var(--2nd-accent-color);
+    }
+    35% {
+        width: 2.5em;
+        box-shadow: 0 -0.5em var(--2nd-accent-color), 0 0.5em var(--2nd-accent-color);
+    }
+    70% {
+        width: 0.5em;
+        box-shadow: -1em -0.5em var(--2nd-accent-color), 1em 0.5em var(--2nd-accent-color);
+    }
+    100% {
+        box-shadow: 1em -0.5em var(--2nd-accent-color), -1em 0.5em var(--2nd-accent-color);
+    }
+}
+
+@keyframes after {
+    0% {
+        height: 0.5em;
+        box-shadow: 0.5em 1em var(--2nd-accent-color), -0.5em -1em var(--2nd-accent-color);
+    }
+    35% {
+        height: 2.5em;
+        box-shadow: 0.5em 0 var(--2nd-accent-color), -0.5em 0 var(--2nd-accent-color);
+    }
+    70% {
+        height: 0.5em;
+        box-shadow: 0.5em -1em var(--2nd-accent-color), -0.5em 1em var(--2nd-accent-color);
+    }
+    100% {
+        box-shadow: 0.5em 1em var(--2nd-accent-color), -0.5em -1em var(--2nd-accent-color);
+    }
+}
+
+/**
+   * Attempt to center the whole thing!
+   */
+
+.loader {
+    position: absolute;
+    top: calc(50% - 1.25em - 50px);
+    left: calc(50% - 1.25em);
+}
+
+@media (prefers-color-scheme: dark) {
+    .loader-wrapper,
+    .loader {
+        background-color: rgb(46, 45, 45);
+    }
+}
