@@ -1,2 +1,1 @@
-# blog
-# blog
+nqmgaming.github.io
