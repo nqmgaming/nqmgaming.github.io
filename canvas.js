@@ -2,8 +2,6 @@
     function playMusic() {
         let myAudio = document.getElementById("playAudio");
         if (myAudio.duration > 0 && !myAudio.paused) {
-            myAudio.pause();
-            //Playing...pause it
         } else {
             myAudio.play();
             //Not playing...maybe paused, stopped or never played.
